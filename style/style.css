@@ -21,12 +21,13 @@
 }
 
 html {
-  font-size: clamp(13px, 1.6vw, 16px);
+  font-size: 13px;
 }
 
 body {
   background-color: var(--color-grey-100);
   font: var(--barlow-semi-500);
+  min-height: 100dvh;
 }
 
 .testimonials {
@@ -42,6 +43,7 @@ body {
   color: var(--color-grey-400);
   border-radius: 5px;
   padding: 2rem;
+  box-shadow: 30px 50px 20px rgba(0, 0, 0, 0.1);
 }
 .testimonial--purple {
   background-color: var(--color-purple-500);
@@ -95,10 +97,15 @@ body {
   display: none;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 60rem) {
+  body {
+    display: flex;
+  }
   .testimonials {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
+    margin: auto;
+    width: 80%;
   }
   .testimonial {
     position: relative;
